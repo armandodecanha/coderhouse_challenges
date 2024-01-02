@@ -36,7 +36,14 @@ server.get("/api/products", (req, res) => {
 });
 
 server.get("/api/products/:pid", (req, res) => {
-	const { pid } = req.params;
-	const one = newProduct.readOne(pid);
-	return res.status(200).json(one);
+	try {
+		const { pid } = req.params;
+		const one = newProduct.readOne(pid);
+		return res.status(200).json(one);
+	} catch (error) {
+		return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+	}
 });
