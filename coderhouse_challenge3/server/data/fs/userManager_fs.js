@@ -10,9 +10,11 @@ class UserManager {
   static #users = [];
 
   // Method to initialize the JSON file
+  // (Validate if the JSON file exists)
   init() {
     // Check if the JSON file exists
     const exists = fs.existsSync(this.path);
+    //console.log(exists);
     if (!exists) {
       // If the JSON file doesn't exist, we will create it
       fs.writeFileSync(this.path, JSON.stringify([], null, 2));
@@ -53,7 +55,7 @@ class UserManager {
         // Print in the console the id of the new user
         console.log("User created successfully: " + newUser.id);
         // Return the new user we have just created
-        return newUser.id;
+        return newUser;
       }
     } catch (error) {
       console.log(error.message);
@@ -81,6 +83,7 @@ class UserManager {
   // Method to read one user by id
   readOne(id) {
     try {
+      // Return the user with the id passed as parameter
       const oneUser = UserManager.#users.find((each) => each.id === id);
       if (oneUser) {
         console.log(oneUser);
@@ -96,11 +99,13 @@ class UserManager {
 
   async destroy(id) {
     try {
+      // Return the user with the id passed as parameter
       const oneUser = UserManager.#users.find((each) => each.id === id);
       if (oneUser) {
         UserManager.#users = UserManager.#users.filter(
           (each) => each.id !== id
         );
+        // Write the data into the JSON file
         await fs.promises.writeFile(
           this.path,
           JSON.stringify(UserManager.#users, null, 2)
@@ -132,7 +137,6 @@ const user2 = newUser.create({
   email: "soy@superman.com",
 });
 
-
 // Print the users array
 newUser.read();
 
@@ -141,3 +145,6 @@ newUser.readOne();
 
 // Delete one user by id
 newUser.destroy();
+
+// Export the instance of the class UserManager
+export default newUser;
