@@ -1,0 +1,16 @@
+[
+  {
+    "id": "f8438929fb35191a8ea5d1a4",
+    "title": "Producto 1",
+    "photo": "/ruta/a/la/imagen.jpg",
+    "price": "100€",
+    "stock": 10
+  },
+  {
+    "id": "84f54f4dcedc0fae0fdcb3ba",
+    "title": "Producto 2",
+    "photo": "/ruta/a/la/imagen1.jpg",
+    "price": "200€",
+    "stock": 25
+  }
+]
