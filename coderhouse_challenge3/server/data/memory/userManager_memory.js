@@ -1,3 +1,6 @@
+// Import the crypto module
+import crypto from "crypto";
+
 // Class definition: UserManager
 class UserManager {
   // Static array defined as private to store the users
@@ -12,7 +15,7 @@ class UserManager {
   create(data) {
     // Create a new user object
     const newUser = {
-      id: UserManager.#idCounter++,
+      id: crypto.randomBytes(12).toString("hex"), // Generate a random id for each new user
       name: data.name,
       photo: data.photo,
       email: data.email,
@@ -32,7 +35,7 @@ class UserManager {
   // Method to read one user by id
   readOne(id) {
     // Return the user with the id passed as parameter
-    return UserManager.#users.find((each) => each.id === Number(id));
+    return UserManager.#users.find((each) => each.id === id);
   }
 
   destroy(id) {
@@ -73,4 +76,7 @@ const user2 = newUser.create({
 console.log(newUser.read());
 
 // Print one user by id
-console.log(newUser.readOne(0));
+console.log(newUser.readOne());
+
+// Delete one user by id
+console.log(newProduct.destroy());

@@ -68,7 +68,7 @@ class ProductManager {
   read() {
     try {
       if (ProductManager.#products.length === 0) {
-        throw new Error("There are no products");
+        throw new Error("Not found!");
       } else {
         // Print the array of products in the console
         console.log(ProductManager.#products);
@@ -92,7 +92,7 @@ class ProductManager {
         console.log(oneProduct);
         return oneProduct;
       } else {
-        throw new Error("Product not found with ID: " + id);
+        throw new Error("Not found!");
       }
     } catch (error) {
       console.log(error.message);
@@ -130,8 +130,9 @@ class ProductManager {
 }
 
 // Create a new instance of the class ProductManager
-const newProduct = new ProductManager("./files/products.json");
+const newProduct = new ProductManager("./fs/files/products.json");
 
+/*
 // Create two new products
 const product1 = newProduct.create({
   title: "Producto 1",
@@ -154,6 +155,7 @@ newProduct.readOne();
 
 // Delete one product by id
 newProduct.destroy();
+*/
 
 // Export the instance of the class ProductManager
 export default newProduct;

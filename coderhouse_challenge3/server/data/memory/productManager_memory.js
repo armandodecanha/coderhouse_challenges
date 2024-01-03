@@ -1,3 +1,6 @@
+// Import the crypto module
+import crypto from "crypto";
+
 // Class definition: ProductManager
 class ProductManager {
   // Static array defined as private to store the products
@@ -12,7 +15,7 @@ class ProductManager {
   create(data) {
     // Create a new product object
     const newProduct = {
-      id: ProductManager.#idCounter++,
+      id: crypto.randomBytes(12).toString("hex"), // Generate a random id for each new product
       title: data.title,
       photo: data.photo,
       price: `${data.price}€`,
@@ -33,7 +36,7 @@ class ProductManager {
   // Method to read one product by id
   readOne(id) {
     // Return the product with the id passed as parameter
-    return ProductManager.#products.find((each) => each.id === Number(id));
+    return ProductManager.#products.find((each) => each.id === id);
   }
 
   destroy(id) {
@@ -76,7 +79,7 @@ const product2 = newProduct.create({
 console.log(newProduct.read());
 
 // Print one product by id
-console.log(newProduct.readOne(0));
+console.log(newProduct.readOne());
 
 // Delete one product by id
-console.log(newProduct.destroy(0));
+console.log(newProduct.destroy());

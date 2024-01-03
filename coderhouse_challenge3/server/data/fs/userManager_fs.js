@@ -67,7 +67,7 @@ class UserManager {
   read() {
     try {
       if (UserManager.#users.length === 0) {
-        throw new Error("There are no users");
+        throw new Error("Not found!");
       } else {
         // Print the array of users in the console
         console.log(UserManager.#users);
@@ -89,7 +89,7 @@ class UserManager {
         console.log(oneUser);
         return oneUser;
       } else {
-        throw new Error("User not found with ID: " + id);
+        throw new Error("Not found!");
       }
     } catch (error) {
       console.log(error.message);
@@ -123,8 +123,9 @@ class UserManager {
 }
 
 // Create a new instance of the class UserManager
-const newUser = new UserManager("./files/users.json");
+const newUser = new UserManager("./fs/files/users.json");
 
+/*
 // Create two new users
 const user1 = newUser.create({
   name: "Armando",
@@ -145,6 +146,7 @@ newUser.readOne();
 
 // Delete one user by id
 newUser.destroy();
+*/
 
 // Export the instance of the class UserManager
 export default newUser;
