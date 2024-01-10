@@ -1,0 +1,14 @@
+[
+  {
+    "id": 0,
+    "name": "Armando",
+    "photo": "/ruta/a/la/imagen.jpg",
+    "email": "hola@kaze.com"
+  },
+  {
+    "id": 1,
+    "name": "Leandro",
+    "photo": "/ruta/a/la/imagen1.jpg",
+    "email": "soy@superman.com"
+  }
+]
