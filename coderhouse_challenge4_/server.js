@@ -3,6 +3,7 @@ import morgan from "morgan";
 import { createServer } from "http";
 import { Server } from "socket.io";
 import { engine } from "express-handlebars";
+import events from "./src/data/fs/events.fs.js";
 
 import router from "./src/routers/index.router.js";
 import errorHandler from "./src/middlewares/errorHandler.js";
@@ -17,7 +18,17 @@ const httpServer = createServer(server);
 const socketServer = new Server(httpServer);
 httpServer.listen(PORT, ready);
 socketServer.on("connection", (socket) => {
-  console.log(socket.id);
+    console.log(`client ${socket.id} connected`);
+    socket.emit("welcome", {id: socket.id, name: "CODER"});
+    socket.on("test", async (data) => {
+      try {
+        console.log(data);
+        await events.createEvent(data);
+        socket.emit("success", "well done!");
+      } catch (error) {
+        console.log(error);
+      }
+    });
 });
 
 //views

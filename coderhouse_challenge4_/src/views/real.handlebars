@@ -3,33 +3,74 @@
   <form style="width: 320px;">
     <div class="mb-3 text-center">
       <label for="name" class="form-label mb-0">Title</label>
-      <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        aria-describedby="emailHelp"
+      />
     </div>
     <div class="mb-3 text-center">
       <label for="poster" class="form-label mb-0">Poster</label>
-      <input type="text" class="form-control" id="poster">
+      <input type="text" class="form-control" id="poster" />
     </div>
     <div class="mb-3 text-center">
       <label for="price" class="form-label mb-0">Price</label>
-      <input type="number" class="form-control" id="price">
+      <input type="number" class="form-control" id="price" />
     </div>
-      <div class="mb-3 text-center">
+    <div class="mb-3 text-center">
       <label for="capacity" class="form-label mb-0">Capacity</label>
-      <input type="number" class="form-control" id="capacity">
+      <input type="number" class="form-control" id="capacity" />
     </div>
-      <div class="mb-3 text-center">
+    <div class="mb-3 text-center">
       <label for="place" class="form-label mb-0">Place</label>
-      <input type="text" class="form-control" id="place">
+      <input type="text" class="form-control" id="place" />
     </div>
-      <div class="mb-4 text-center">
+    <div class="mb-4 text-center">
       <label for="date" class="form-label mb-0">Date</label>
-      <input type="date" class="form-control" id="date">
+      <input type="date" class="form-control" id="date" />
     </div>
-    <button id="newEvent" type="button" class="w-100 btn btn-danger">CREATE!</button>
+    <button
+      id="newEvent"
+      type="button"
+      class="w-100 btn btn-danger"
+    >CREATE!</button>
   </form>
 </main>
 
 <script src="/socket.io/socket.io.js"></script>
 <script>
   const socket = io();
+  socket.on("welcome", (data) => {
+      console. log(data);
+  });
+  socket.emit("test", {
+    name: "The Matrix",
+    poster: "https://www.imdb.com/title/tt0133093/mediaviewer/rm4033221120/",
+    price: 10,
+    capacity: 100,
+    place: "Cinema",
+    date: "2021-10-10",
+  });
+  socket.on("success", (data) => {
+    alert(data);
+  });
+  document.querySelector("#newEvent").addEventListener("click", (event) => {
+    event.preventDefault();
+    const name = document.querySelector("#name").value;
+    const poster = document.querySelector("#poster").value;
+    const price = document.querySelector("#price").value;
+    const capacity = document.querySelector("#capacity").value;
+    const place = document.querySelector("#place").value;
+    const date = document.querySelector("#date").value;
+    date
+    socket.emit("newEvent", {
+      name,
+      poster,
+      price,
+      capacity,
+      place,
+      date,
+    });
+  }
 </script>

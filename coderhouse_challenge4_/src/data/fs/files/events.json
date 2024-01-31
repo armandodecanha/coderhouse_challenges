@@ -52,5 +52,23 @@
     "price": "2",
     "capacity": "1000",
     "date": "2024-01-05T22:17:52.959Z"
+  },
+  {
+    "id": "5ca35c3844fc57a6002a6ff4",
+    "name": "The Matrix",
+    "poster": "https://www.imdb.com/title/tt0133093/mediaviewer/rm4033221120/",
+    "place": "Cinema",
+    "price": 10,
+    "capacity": 100,
+    "date": "2021-10-10"
+  },
+  {
+    "id": "1d566985351f64d1754aaaac",
+    "name": "The Matrix",
+    "poster": "https://www.imdb.com/title/tt0133093/mediaviewer/rm4033221120/",
+    "place": "Cinema",
+    "price": 10,
+    "capacity": 100,
+    "date": "2021-10-10"
   }
 ]

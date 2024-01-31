@@ -16,7 +16,7 @@ class ProductManager {
     const exists = fs.existsSync(this.path);
     //console.log(exists);
     if (!exists) {
-      // If the JSON file doesn't exist, we will create it
+      // If the JSON file doesn't exist, we will create it automatically
       fs.writeFileSync(this.path, JSON.stringify([], null, 2));
     } else {
       // If the JSON file exists, read it
