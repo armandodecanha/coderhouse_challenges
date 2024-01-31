@@ -67,12 +67,12 @@ class OrderManager {
   }
 
   // Method to read one order by id
-  readOne(id) {
+  readByUser(uid) {
     try {
-      const oneOrder = OrderManager.#orders.find((each) => each.id === id);
-      if (oneOrder) {
-        console.log(oneOrder);
-        return oneOrder;
+      const userOrders = OrderManager.#orders.filter((each) => each.uid === uid);
+      if (userOrders.length > 0) {
+        console.log(userOrders);
+        return userOrders;
       } else {
         throw new Error("Not found!");
       }
