@@ -1,0 +1,23 @@
+[
+  {
+    "id": "df2a1cea0a1bfeebf0f04a56",
+    "title": "HP2",
+    "photo": "/ruta/a/la/imagen.jpg",
+    "price": "20€",
+    "stock": 4
+  },
+  {
+    "id": "92ab7c86b5bb310f174c7503",
+    "title": "Disco de vinilo",
+    "photo": "/ruta/a/la/imagen1.jpg",
+    "price": "12€",
+    "stock": 4
+  },
+  {
+    "id": "368c9c90f9cc3415fbff8304",
+    "title": "Disco de vinilo - Call me by",
+    "photo": "/ruta/a/la/imagen.jpg",
+    "price": "19.99€",
+    "stock": 2
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "6730c64dc40e33eb1f1a23f5",
+    "name": "dbz",
+    "poster": "https://i.postimg.cc/J0KqrSbv/dbz.jpg",
+    "place": "showcase",
+    "price": 10,
+    "capacity": 50,
+    "date": "2024-01-04T12:08:49.658Z"
+  },
+  {
+    "id": "9c0c99c5966901ec2807c650",
+    "name": "hp",
+    "poster": "https://i.postimg.cc/C1G7tRdF/hp.jpg",
+    "place": "showcase",
+    "price": 10,
+    "capacity": 50,
+    "date": "2024-01-04T12:09:12.943Z"
+  },
+  {
+    "id": "2104b0ed871031c5c584afbe",
+    "name": "hulk",
+    "poster": "https://i.postimg.cc/RCTGLJjd/hulk.jpg",
+    "place": "showcase",
+    "price": 10,
+    "capacity": 50,
+    "date": "2024-01-04T12:09:28.569Z"
+  },
+  {
+    "id": "e562f7797675148dfde797ea",
+    "name": "marvels",
+    "poster": "https://i.postimg.cc/LXKvNt9C/marvels.jpg",
+    "place": "showcase",
+    "price": 10,
+    "capacity": 50,
+    "date": "2024-01-04T12:09:42.548Z"
+  },
+  {
+    "id": "2caa596f9b49092bd15fe7d0",
+    "name": "pokemon",
+    "poster": "https://i.postimg.cc/3N31H3D2/pkm.jpg",
+    "place": "showcase",
+    "price": 10,
+    "capacity": 50,
+    "date": "2024-01-04T12:09:56.006Z"
+  },
+  {
+    "id": "3b91769486ac8771bfbd20a3",
+    "name": "lord of the rings",
+    "poster": "https://i.postimg.cc/0yyQKkVq/rings.jpg",
+    "place": "Stadium",
+    "price": "2",
+    "capacity": "1000",
+    "date": "2024-01-05T22:17:52.959Z"
+  },
+  {
+    "id": "5ca35c3844fc57a6002a6ff4",
+    "name": "The Matrix",
+    "poster": "https://www.imdb.com/title/tt0133093/mediaviewer/rm4033221120/",
+    "place": "Cinema",
+    "price": 10,
+    "capacity": 100,
+    "date": "2021-10-10"
+  },
+  {
+    "id": "1d566985351f64d1754aaaac",
+    "name": "The Matrix",
+    "poster": "https://www.imdb.com/title/tt0133093/mediaviewer/rm4033221120/",
+    "place": "Cinema",
+    "price": 10,
+    "capacity": 100,
+    "date": "2021-10-10"
+  }
+]
