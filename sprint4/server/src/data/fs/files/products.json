@@ -40,5 +40,19 @@
     "photo": "./posters/spyro3.webp",
     "price": "sd€",
     "stock": "sd"
+  },
+  {
+    "id": "f97facd925a59bab98668a5a",
+    "title": "Test",
+    "photo": "https://source.unsplash.com/random/?video-games",
+    "price": "10€",
+    "stock": "1"
+  },
+  {
+    "id": "f7f1618d3752f8c0fe6c0328",
+    "title": "Test2",
+    "photo": "https://source.unsplash.com/random/?video-games",
+    "price": "16€",
+    "stock": "2"
   }
 ]

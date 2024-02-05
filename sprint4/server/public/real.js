@@ -1,13 +1,8 @@
-console.log("Real time");
+console.log("Socket connected");
 
 const socket = io();
 
-socket.on("welcome", (data) => {
-  //console.log(data);
-});
-
 socket.on("products", (data) => {
-    //console.log(data);
     const template = data
       .map(
         (each) => `
@@ -21,23 +16,20 @@ socket.on("products", (data) => {
     document.querySelector("#products").innerHTML = template;
   });
 
-//socket.emit("hello", { name: "John Doe"});
-
-socket.on("newSuccess", (data) => {
-  //console.log(data);
-});
-
-document.querySelector("#newProduct").addEventListener("click", (event) => {
+  document.querySelector("#newProduct").addEventListener("click", (event) => {
     event.preventDefault();
-    const title = document.querySelector("#name").value;
-    const photo = document.querySelector("#photo").value;
-    const price = document.querySelector("#price").value;
-    const stock = document.querySelector("#stock").value;
+    const title = document.querySelector("#name");
+    const photo = document.querySelector("#photo");
+    const price = document.querySelector("#price");
+    const stock = document.querySelector("#stock");
     const data = {};
-    title && (data.title = title);
-    photo && (data.photo = photo);
-    price && (data.price = price);
-    stock && (data.stock = stock);
-    //console.log(data);
+    title.value && (data.title = title.value);
+    photo.value && (data.photo = photo.value);
+    price.value && (data.price = price.value);
+    stock.value && (data.stock = stock.value);
     socket.emit("newProduct", data);
+    title.value = '';
+    price.value = '';
+    stock.value = '';
+    alert('Producto creado');
 });

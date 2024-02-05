@@ -14,7 +14,23 @@ viewsRouter.get("/", async (req, res, next) => {
   }
 });
 
+viewsRouter.get("/real", (req, res, next) => {
+  try {
+    return res.render("real");
+  } catch (error) {
+    next(error);
+  }
+});
+
+viewsRouter.get("/form", (req, res, next) => { // Nuevo endpoint para "/form"
+  try {
+    return res.render("form"); // Renderiza la vista "form"
+  } catch (error) {
+    next(error);
+  }
+});
+
 viewsRouter.use("/products", productsRouter);
-viewsRouter.use("/users", usersRouter);
+viewsRouter.use("/", usersRouter);
 
 export default viewsRouter;

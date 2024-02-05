@@ -18,14 +18,11 @@ const httpServer = createServer(server);
 const socketServer = new Server(httpServer);
 httpServer.listen(PORT, ready);
 socketServer.on("connection", (socket) => {
-  console.log(socket.id);
-  //socket.emit("welcome", "Welcome");
+  console.log("Socket connected.");
   socket.emit("products", products.read());
   socket.on("newProduct", async (data) => {
     try {
-        //console.log(data);
         await products.create(data);
-        //socket.emit("products", products.read());
     } catch (error) {
         console.log(error);
     }
