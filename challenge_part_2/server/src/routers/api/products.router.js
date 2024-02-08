@@ -1,6 +1,7 @@
 import { Router } from "express";
 //import newProduct from "../../data/fs/productManager_fs.js";
 import newProduct from "../../data/mongo/manager.mongo.js";
+import newUser from "../../data/mongo/manager.mongo.js";
 import propsProducts from "../../middlewares/propsProducts.mid.js";
 
 const productsRouter = Router();

@@ -42,17 +42,10 @@
     "stock": "sd"
   },
   {
-    "id": "f97facd925a59bab98668a5a",
-    "title": "Test",
+    "id": "773c5728698d9a6db79a8a87",
+    "title": "Spyro 3",
     "photo": "https://source.unsplash.com/random/?video-games",
-    "price": "10€",
-    "stock": "1"
-  },
-  {
-    "id": "f7f1618d3752f8c0fe6c0328",
-    "title": "Test2",
-    "photo": "https://source.unsplash.com/random/?video-games",
-    "price": "16€",
+    "price": "5€",
     "stock": "2"
   }
 ]

@@ -7,6 +7,7 @@ const schema = new Schema(
     photo: { type: String, default: "https://via.placeholder.com/150" },
     price: { type: Number, required: true },
     stock: { type: Number, required: true },
+    capacity: { type: Number, default: 50 },
   },
   { timestamps: true }
 );
