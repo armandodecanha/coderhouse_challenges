@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1c93088e27c59bdb87924165",
+    "name": "Armando",
+    "photo": "./ruta/a/la/imagen.jpg",
+    "email": "hola@kaze.com"
+  },
+  {
+    "id": "7fe97eb34cf7b84db9755917",
+    "name": "Leandro",
+    "photo": "./ruta/a/la/imagen1.jpg",
+    "email": "soy@superman.com"
+  }
+]

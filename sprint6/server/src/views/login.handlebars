@@ -1,0 +1,28 @@
+<main class="flex-grow-1 d-flex w-100 flex-wrap justify-content-evenly">
+  <section
+    class="w-50 mb-4 d-flex flex-column justify-content-start align-items-center"
+    style="min-width: 380px;"
+  >
+    <h3 class="mt-5 mb-2 text-center" style="margin: 40px 10px !important; padding: 10px 380px; font-weight: bold; background-color: #240035 !important; border-radius: 10px;">Iniciar sesión:</h3>
+    <form
+      style="max-width: 360px;"
+      class="w-100 d-flex flex-column justify-content-center items-align-center"
+    >
+      <fieldset class="mb-3 text-center">
+        <label for="email" class="form-label mb-0">E-mail:</label>
+        <input type="text" class="form-control" id="email" />
+      </fieldset>
+      <fieldset class="mb-3 text-center">
+        <label for="password" class="form-label mb-0">Contraseña:</label>
+        <input type="password" class="form-control" id="password" />
+      </fieldset>
+      <button
+        id="login"
+        type="button"
+        class="w-100 btn btn-danger"
+      >Iniciar sesión</button>
+    </form>
+  </section>
+</main>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/real.js"></script>

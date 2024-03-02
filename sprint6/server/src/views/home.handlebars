@@ -1,0 +1,19 @@
+<main>
+    <h3 style="margin: 40px 20px 0px 20px; padding: 10px 20px; font-weight: bold; background-color: #240035 !important; border-radius: 10px;">Juegos disponibles:</h3>
+    <p></p>
+    <div class="container-fluid">
+        <div id="products" class="row">
+            {{#each products}}
+            <div class="col-sm-2">
+                <div class="card m-2">
+                    <img class="card-img-top" src="{{this.photo}}" alt="{{this.title}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.title}}</h5>
+                        <!-- <p class="card-text">Descripción del producto aquí</p> -->
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</main>
