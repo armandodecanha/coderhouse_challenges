@@ -154,7 +154,7 @@ class UserManager {
 }
 
 // Create a new instance of the class UserManager
-const newUser = new UserManager(".src/data/fs/files/users.json");
+const newUser = new UserManager("./src/data/fs/files/users.json");
 
 /*
 // Create two new users
