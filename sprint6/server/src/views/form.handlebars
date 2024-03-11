@@ -1,0 +1,37 @@
+<main class="flex-grow-1 d-flex w-100 flex-wrap justify-content-evenly">
+  <section
+    class="w-50 mb-4 d-flex flex-column justify-content-start align-items-center"
+    style="min-width: 380px;"
+  >
+    
+<h3 class="mt-5 mb-2 text-center" style="margin: 40px 10px !important; padding: 10px 380px; font-weight: bold; background-color: #240035 !important; border-radius: 10px;">Comprar:</h3>
+    <form
+      style="max-width: 360px;"
+      class="w-100 d-flex flex-column justify-content-center items-align-center"
+    >
+      <fieldset class="mb-3 text-center">
+        <label for="name" class="form-label mb-0">Título:</label>
+        <input type="text" class="form-control" id="name" />
+      </fieldset>
+      <fieldset class="mb-3 text-center">
+        <label for="poster" class="form-label mb-0">Carátula (añadida una de ejemplo):</label>
+        <input type="text" class="form-control" id="photo" value="https://source.unsplash.com/random/?video-games" />
+        </fieldset>
+      <fieldset class="mb-3 text-center">
+        <label for="price" class="form-label mb-0">Precio:</label>
+        <input type="number" class="form-control" id="price" />
+      </fieldset>
+      <fieldset class="mb-3 text-center">
+        <label for="capacity" class="form-label mb-0">Cantidad:</label>
+        <input type="number" class="form-control" id="stock" />
+      </fieldset>
+      <button
+        id="newProduct"
+        type="button"
+        class="w-100 btn btn-danger"
+      >Crear</button>
+    </form>
+  </section>
+</main>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/real.js"></script>

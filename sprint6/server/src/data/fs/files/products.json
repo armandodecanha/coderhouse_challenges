@@ -1,0 +1,51 @@
+[
+  {
+    "id": "df2a1cea0a1bfeebf0f04a56",
+    "title": "The Secret of Monkey Island",
+    "photo": "./posters/monkey_island1.jpg",
+    "price": "20€",
+    "stock": 4
+  },
+  {
+    "id": "92ab7c86b5bb310f174c7503",
+    "title": "Monkey Island 2: LeChuck's Revenge",
+    "photo": "./posters/monkey_island2.jpg",
+    "price": "12€",
+    "stock": 4
+  },
+  {
+    "id": "368c9c90f9cc3415fbff8304",
+    "title": "Return to Monkey Island",
+    "photo": "./posters/monkey_island5.webp",
+    "price": "19.99€",
+    "stock": 2
+  },
+  {
+    "id": "ada9562bb30b48188d15359b",
+    "title": "Spyro the Dragon",
+    "photo": "./posters/spyro1.jpg",
+    "price": "19.99€",
+    "stock": 1
+  },
+  {
+    "id": "6a8c956c70567ea8f293e7fc",
+    "title": "Spyro 2: Ripto's Rage!",
+    "photo": "./posters/spyro2.jpg",
+    "price": "19.99€",
+    "stock": 1
+  },
+  {
+    "id": "b491570f7099cbed4a439f68",
+    "title": "Spyro: Year of the Dragon",
+    "photo": "./posters/spyro3.webp",
+    "price": "sd€",
+    "stock": "sd"
+  },
+  {
+    "id": "773c5728698d9a6db79a8a87",
+    "title": "Spyro 3",
+    "photo": "https://source.unsplash.com/random/?video-games",
+    "price": "5€",
+    "stock": "2"
+  }
+]
