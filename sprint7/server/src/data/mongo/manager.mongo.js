@@ -36,6 +36,14 @@ class MongoManager {
       throw error;
     }
   }
+  async readByEmail(email) {
+    try {
+      const one = await this.model.findOne({ email });
+      return one;
+    } catch (error) {
+      throw error;
+    }
+  }
   async update(id, data) {
     try {
       const opt = { new: true }; // Returns the object after the modification
@@ -59,4 +67,5 @@ const newProduct = new MongoManager(Products);
 const newUser = new MongoManager(User);
 const newOrder = new MongoManager(Order);
 
-export default { newProduct, newUser, newOrder };
+export { newProduct, newUser, newOrder };
+export default MongoManager;
